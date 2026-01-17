@@ -6,7 +6,7 @@
 /*   By: ykosebas <ykosebas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 17:44:22 by ykosebas          #+#    #+#             */
-/*   Updated: 2026/01/10 18:42:21 by ykosebas         ###   ########.fr       */
+/*   Updated: 2026/01/17 14:52:51 by ykosebas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ size_t ft_strlen(const char *s)
 int i = 0;
     while (s[i] != '\0')
         i++;
-    return i;
+    return (i);
 }

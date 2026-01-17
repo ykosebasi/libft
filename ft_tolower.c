@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykosebas <ykosebas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/10 17:35:42 by ykosebas          #+#    #+#             */
-/*   Updated: 2026/01/17 12:01:52 by ykosebas         ###   ########.fr       */
+/*   Created: 2026/01/17 12:50:39 by ykosebas          #+#    #+#             */
+/*   Updated: 2026/01/17 12:59:29 by ykosebas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum  (int c)
+int ft_tolower(int c)
 {
-    if (('A' <= c && c <= 'Z')||('a' <= c && c <= 'z'))
-        return (1);
-    else if('0' <= c && c <= '9')
-        return (1);
+    if ('A' <= c && c <= 'Z')
+        return (c + 32);
     else
-        return (0);
+        return (c);
 }

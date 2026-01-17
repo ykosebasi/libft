@@ -6,11 +6,12 @@
 /*   By: ykosebas <ykosebas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 17:46:21 by ykosebas          #+#    #+#             */
-/*   Updated: 2026/01/10 18:50:49 by ykosebas         ###   ########.fr       */
+/*   Updated: 2026/01/17 13:01:28 by ykosebas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 size_t ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t i;

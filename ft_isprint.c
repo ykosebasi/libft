@@ -6,7 +6,7 @@
 /*   By: ykosebas <ykosebas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 17:44:11 by ykosebas          #+#    #+#             */
-/*   Updated: 2026/01/10 17:44:13 by ykosebas         ###   ########.fr       */
+/*   Updated: 2026/01/17 12:04:40 by ykosebas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,4 @@ int ft_isprint(int c)
         return 0;
     else
         return 1;
-}
-
-int main(void)
-{
-int c = '\t';
-printf("%d\n", ft_isprint(c));
 }
