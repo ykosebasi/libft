@@ -101,3 +101,40 @@ int main(void)
     char *str = "+1234ab";
     printf("%d\n", ft_atoi(str));
 }
+
+int main (void)
+{
+	char s[6] = "hello";
+	printf("%s\n", s);
+	ft_bzero(s, 6);
+	printf("%s\n", s);
+}
+
+int main(void)
+{
+	char dest[] = "hello";
+	char src[] = "dunya";
+	ft_memcpy(dest, src, 0);
+	printf("%s\n", dest);
+}
+
+int main()
+{
+	char str[] = "abcd";
+	ft_memmove(str + 1, str, 4);
+	printf("%s\n", str );
+}
+
+int main()
+{
+	char str[] = "merhaba";
+	char *p = ft_memchr(str, 'h', 7);
+	printf("%s\n", p);
+}
+
+int main()
+{
+	char str1[] = "mea";
+	char str2[] = "mer";
+	printf("%d\n",ft_memcmp(str1, str2, 3));
+}
