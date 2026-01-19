@@ -1,20 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykosebas <ykosebas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/17 12:50:39 by ykosebas          #+#    #+#             */
-/*   Updated: 2026/01/19 15:52:54 by ykosebas         ###   ########.fr       */
+/*   Created: 2026/01/19 17:12:23 by ykosebas          #+#    #+#             */
+/*   Updated: 2026/01/19 18:45:52 by ykosebas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//libft.h olmamalıymış normit hatasıymış
-int ft_tolower(int c)
+#include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    if ('A' <= c && c <= 'Z')
-        return (c + 32);
-    else
-        return (c);
+	size_t	s_len;
+	size_t	i;
+	char	*str;
+
+	if (s == NULL)
+		return (NULL);
+	s_len = ft_strlen(s);
+
+	if(start >= s_len)
+	{
+		str = malloc(1);
+		str[0] = '\0';
+	}
+	else
+		str = malloc(min(len, s_len - start) + 1);
+	i = 0;
+	while (i < min(len, s_len - start))
+	{
+		str[i] = s[start + i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);		
 }

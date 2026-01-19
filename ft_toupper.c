@@ -6,11 +6,9 @@
 /*   By: ykosebas <ykosebas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 18:32:48 by ykosebas          #+#    #+#             */
-/*   Updated: 2026/01/17 12:56:57 by ykosebas         ###   ########.fr       */
+/*   Updated: 2026/01/19 15:52:47 by ykosebas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int ft_toupper(int c)
 {

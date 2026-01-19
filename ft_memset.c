@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykosebas <ykosebas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/17 12:50:39 by ykosebas          #+#    #+#             */
-/*   Updated: 2026/01/19 15:52:54 by ykosebas         ###   ########.fr       */
+/*   Created: 2026/01/19 12:17:58 by ykosebas          #+#    #+#             */
+/*   Updated: 2026/01/19 12:35:18 by ykosebas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//libft.h olmamalıymış normit hatasıymış
-int ft_tolower(int c)
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-    if ('A' <= c && c <= 'Z')
-        return (c + 32);
-    else
-        return (c);
+	unsigned char	*ptr;
+	size_t			i;
+
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = (unsigned char)c;
+		i++;
+	}
+	return (s);
 }

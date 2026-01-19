@@ -138,3 +138,25 @@ int main()
 	char str2[] = "mer";
 	printf("%d\n",ft_memcmp(str1, str2, 3));
 }
+
+int main()
+{
+	char str[] = "merhaba";
+	char *p;
+	p = ft_memset(str, 'y', 2);
+	printf("%s\n", p);
+}
+
+int main()
+{
+	char ptr[] = "merhaba";
+	size_t len;
+
+	len = ft_strlen(ptr) + 1;
+	char *copy;
+	copy = ft_calloc(len, sizeof(7));
+
+	printf("original : %s\n", ptr);
+	printf("copy : %s\n", copy);
+	free(copy);
+}
