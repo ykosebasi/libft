@@ -6,13 +6,13 @@
 /*   By: ykosebas <ykosebas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 18:32:48 by ykosebas          #+#    #+#             */
-/*   Updated: 2026/01/19 15:52:47 by ykosebas         ###   ########.fr       */
+/*   Updated: 2026/01/23 14:07:51 by ykosebas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_toupper(int c)
 {
-    if ('a' <= c && c <= 'z');
+    if ('a' <= c && c <= 'z')
         return (c - 32);
     else
         return (c);

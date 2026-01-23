@@ -6,7 +6,7 @@
 /*   By: ykosebas <ykosebas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 18:33:00 by ykosebas          #+#    #+#             */
-/*   Updated: 2026/01/19 17:35:54 by ykosebas         ###   ########.fr       */
+/*   Updated: 2026/01/23 17:36:00 by ykosebas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <unistd.h>
 #include <stdio.h>
-# include <stdlib.h>
+#include <stdlib.h>
 
 
 int ft_isalpha(int c);
@@ -42,6 +42,7 @@ void	*ft_memset(void *s, int c, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
 

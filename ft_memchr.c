@@ -6,7 +6,7 @@
 /*   By: ykosebas <ykosebas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 20:02:34 by ykosebas          #+#    #+#             */
-/*   Updated: 2026/01/18 20:35:05 by ykosebas         ###   ########.fr       */
+/*   Updated: 2026/01/23 14:08:47 by ykosebas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			i++;
 		return (NULL);
 	}
+	return (NULL);
 }
