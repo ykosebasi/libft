@@ -6,7 +6,11 @@
 /*   By: ykosebas <ykosebas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 18:33:00 by ykosebas          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2026/01/23 17:36:00 by ykosebas         ###   ########.fr       */
+=======
+/*   Updated: 2026/01/24 19:11:48 by ykosebas         ###   ########.fr       */
+>>>>>>> 3e0f7ed (Initial commit)
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +47,11 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
+<<<<<<< HEAD
+=======
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+>>>>>>> 3e0f7ed (Initial commit)
 
 #endif
 

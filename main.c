@@ -171,6 +171,7 @@
 // 	free(total);
 // }
 
+<<<<<<< HEAD
 int main()
 {
 	char	*s1 = "-12-12merhaba-12";
@@ -178,3 +179,37 @@ int main()
 	printf("%s\n", total);
 	free (total);
 }
+=======
+// int main()
+// {
+// 	char	*s1 = "-12-12merhaba-12";
+// 	char *total = ft_strtrim(s1, "-12");
+// 	printf("%s\n", total);
+// 	free (total);
+// }
+
+// int	main(void)
+// {
+// 	char	*s;
+
+// 	s = ft_itoa(-42);
+// 	printf("%s\n", s);
+// 	free(s);
+// }
+
+
+// static char f(unsigned int i, char c)
+// {
+// 	(void)i;
+//      return c + 1;
+// }
+// int	main(void)
+// {
+// 	char	*r;
+
+// 	r = ft_strmapi("abc", f);
+// 	printf("%s\n", r);
+// 	free(r);
+// }
+
+>>>>>>> 3e0f7ed (Initial commit)
