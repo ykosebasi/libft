@@ -171,15 +171,7 @@
 // 	free(total);
 // }
 
-<<<<<<< HEAD
-int main()
-{
-	char	*s1 = "-12-12merhaba-12";
-	char *total = ft_strtrim(s1, "-12");
-	printf("%s\n", total);
-	free (total);
-}
-=======
+
 // int main()
 // {
 // 	char	*s1 = "-12-12merhaba-12";
@@ -212,4 +204,37 @@ int main()
 // 	free(r);
 // }
 
->>>>>>> 3e0f7ed (Initial commit)
+// void f(unsigned int i, char *c)
+// {
+// 	(void)i;
+// 	*c = *c + 1;
+// }
+// int main()
+// {
+// 	char s[] = "1234";
+	
+// 	ft_striteri(s, f);
+// 	printf("%s\n", s);
+// 	return(0);
+// }
+
+// int main()
+// {
+// 	ft_putchar_fd('A', 1);
+// }
+
+// int main()
+// {
+// 	ft_putstr_fd("hello", 1);
+// }
+
+// int main()
+// {
+// 	ft_putendl_fd("hello", 1);
+// }
+
+
+// int main(void)
+// {
+// 	ft_putnbr_fd(1234, 1);
+// }
