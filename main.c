@@ -238,3 +238,205 @@
 // {
 // 	ft_putnbr_fd(1234, 1);
 // }
+
+// int main(void)
+// {
+//     printf("%s\n", ft_split("merhaba dunya", ' ')[0]);
+//     return 0;
+// }
+
+// int main()
+// {
+//     t_list *node = ft_lstnew("Merhaba");
+
+//     printf("Node content: %s\n", (char *)node->content);
+//     printf ("Node next: %s\n", (char *)node->next);
+//     free(node);
+// }
+
+
+// int	main(void)
+// {
+// 	t_list	*list;
+
+// 	list = ft_lstnew("dünya");
+// 	ft_lstadd_front(&list, ft_lstnew("merhaba"));
+
+// 	printf("Node content: %s\n", (char *)list->content);
+// 	printf("Node next: %s\n", (char *)list->next->content);
+
+// 	free(list->next);
+// 	free(list);
+// 	return (0);
+// }
+
+
+// int	main(void)
+// {
+// 	t_list	*node1;
+// 	t_list	*node2;
+// 	t_list	*list;
+
+// 	node1 = ft_lstnew("Merhaba");
+// 	node2 = ft_lstnew("Dünya");
+	
+// 	node1->next = node2;
+// 	node2->next = NULL;
+
+//     list = node1;
+// 	printf("Liste boyutu: %d\n", ft_lstsize(list));
+
+// 	free(node2);
+// 	free(node1);
+// }
+
+
+// int	main(void)
+// {
+// 	t_list	*node1;
+// 	t_list	*node2;
+// 	t_list	*last;
+
+// 	node1 = ft_lstnew("merhaba");
+// 	node2 = ft_lstnew("42");
+
+// 	node1->next = node2;
+// 	node2->next = NULL;
+
+// 	last = ft_lstlast(node1);
+// 	printf("Son node: %s\n", (char *)last->content);
+
+// 	free(node2);
+// 	free(node1);
+// }
+
+
+// int	main(void)
+// {
+// 	t_list	*list;
+// 	t_list	*node1;
+// 	t_list	*node2;
+
+// 	node1 = ft_lstnew("Merhaba");
+// 	node2 = ft_lstnew("Dünya");
+
+// 	list = node1;
+// 	ft_lstadd_back(&list, node2);
+//     printf("Baş node: %s\n", (char *)list->content);
+// 	printf("Son node: %s\n", (char *)ft_lstlast(list)->content);
+
+// 	free(node2);
+// 	free(node1);
+// }
+
+
+
+// void	del(void *content)
+// {
+// 	(void)content;
+// }
+// int	main(void)
+// {
+// 	t_list	*list;
+// 	t_list	*node1;
+// 	t_list	*node2;
+// 	t_list	*node3;
+
+// 	node1 = ft_lstnew("Merhaba");
+// 	node2 = ft_lstnew("42");
+// 	node3 = ft_lstnew("İstanbul");
+
+// 	list = node1;
+// 	ft_lstadd_back(&list, node2);
+// 	ft_lstadd_back(&list, node3);
+
+// 	ft_lstdelone(node2, del);
+
+//     list->next = node3;
+// 	printf("%s\n", (char *)list->content);
+//     printf("%s\n", (char *)list->next->content);
+// }
+
+
+// void	del(void *content)
+// {
+// 	(void)content;
+// }
+
+// int	main(void)
+// {
+// 	t_list	*list = ft_lstnew("Merhaba");
+
+// 	ft_lstadd_back(&list, ft_lstnew("42"));
+// 	ft_lstadd_back(&list, ft_lstnew("İstanbul"));
+
+// 	ft_lstclear(&list, del);
+
+// 	if (!list)
+// 		printf("Liste temizlendi.\n");
+// }
+
+
+
+// void	uppercase(void *content)
+// {
+// 	char *str = content;
+// 	int i = 0;
+// 	while (str[i])
+// 	{
+// 		str[i] = ft_toupper(str[i]);
+// 		i++;
+// 	}
+// }
+
+// int	main(void)
+// {
+// 	char str1[] = "merhaba";
+// 	char str2[] = "dünya";
+// 	char str3[] = "istanbul";
+
+// 	t_list	*list = ft_lstnew(str1);
+// 	ft_lstadd_back(&list, ft_lstnew(str2));
+// 	ft_lstadd_back(&list, ft_lstnew(str3));
+
+// 	ft_lstiter(list, uppercase);
+
+// 	printf("%s %s %s\n", 
+// 		(char *)list->content, 
+// 		(char *)list->next->content, 
+// 		(char *)list->next->next->content);
+
+// 	return (0);
+// }
+
+
+
+// void	*uppercase(void *content)
+// {
+// 	char	*str = content;
+// 	int		i = 0;
+
+// 	while (str[i])
+// 	{
+// 		str[i] = ft_toupper(str[i]);
+// 		i++;
+// 	}
+// 	return (content);
+// }
+
+// int	main(void)
+// {
+// 	char	str1[] = "merhaba";
+// 	char	str2[] = "dünya";
+
+// 	t_list	*list = ft_lstnew(str1);
+// 	ft_lstadd_back(&list, ft_lstnew(str2));
+
+// 	ft_lstmap(list, uppercase, NULL);
+
+// 	printf("%s %s\n",
+// 		(char *)list->content,
+// 		(char *)list->next->content);
+
+// 	return (0);
+// }
