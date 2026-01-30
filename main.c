@@ -1,36 +1,7 @@
 #include "libft.h"
+#include <stdio.h>
 
-// int main(void)
-// {
-//     int c = 'y';
-//     printf("%d\n", ft_isalnum(c));
-// }
 
-// int main(void)
-// {
-//     int c = 'A';
-//     printf("%d\n", ft_isalpha(c)); 
-//     return 0;
-// }
-
-// int main(void)
-// {
-//     int c ='a';
-//     printf("%d\n", ft_isascii(c)); 
-//     return 0;
-// }
-
-// int main(void)
-// {
-// int c = '2';
-// printf("%d\n", ft_isdigit(c));
-// }
-
-// int main(void)
-// {
-// int c = '\t';
-// printf("%d\n", ft_isprint(c));
-// }
 
 // int main(void)
 // {
@@ -58,17 +29,6 @@
 //     return(0);
 // }
 
-// int main(void)
-// {
-//     int c = '%';
-//     printf("%c\n",ft_toupper(c));
-// }
-
-// int main(void)
-// {
-//     int c = 'A';
-//     printf("%c\n",ft_tolower(c));
-// }
 
 // int main(void)
 // {
@@ -410,7 +370,6 @@
 // }
 
 
-
 // void	*uppercase(void *content)
 // {
 // 	char	*str = content;
@@ -439,4 +398,53 @@
 // 		(char *)list->next->content);
 
 // 	return (0);
+// }
+
+
+
+							//	BAŞTAN YAZMAYA BAŞLADIMMMMMMMMMMMMMMM
+
+
+// #include <stdio.h>
+
+// int main()
+// {
+// 	printf("%d\n", ft_isalpha('t'));
+// }
+
+
+// int main()
+// {
+// 	printf("%d\n", ft_isdigit('4'));
+// }
+
+
+// int main()
+// {
+// 	printf("%d\n", ft_isalnum('?'));
+// }
+
+
+
+// int main()
+// {
+// 	printf("%d\n", ft_isascii('/'));
+// }
+
+
+// int main()
+// {
+// 	printf("%d\n",ft_isprint('\n'));
+// }
+
+
+// int main()
+// {
+// 	printf("%c\n", ft_toupper('a'));
+// }
+
+
+// int main()
+// {
+// 	printf("%c\n", ft_tolower('A'));
 // }

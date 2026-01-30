@@ -10,11 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//libft.h olmamalıymış normit hatasıymış
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if ('A' <= c && c <= 'Z')
-        return (c + 32);
-    else
-        return (c);
+	if ('A' <= c && c <= 'Z')
+		return (c + 32);
+	else
+		return (c);
 }

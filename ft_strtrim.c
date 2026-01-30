@@ -16,8 +16,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
-	int count;
-	
+	int		count;
+
 	i = 0;
 	if (!s1 || !set)
 		return (NULL);
@@ -26,7 +26,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		if (ft_strchr(set, s1[i]))
 			i++;
 		else
-			break;
+			break ;
 	}
 	j = ft_strlen(s1);
 	count = 0;
@@ -35,9 +35,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		if (ft_strchr(set, s1[j - 1]))
 			count++;
 		else
-			break;
+			break ;
 		j--;
 	}
 	return (ft_substr(s1, i, (ft_strlen(s1) - i - count)));
 }
-
