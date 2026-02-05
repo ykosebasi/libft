@@ -4,51 +4,6 @@
 
 
 
-
-// int main()
-// {
-// 	char ptr[] = "merhaba";
-// 	size_t len;
-
-// 	len = ft_strlen(ptr) + 1;
-// 	char *copy;
-// 	copy = ft_calloc(len, sizeof(7));
-
-// 	printf("original : %s\n", ptr);
-// 	printf("copy : %s\n", copy);
-// 	free(copy);
-// }
-
-
-// int main()
-// {
-// 	char *s1 = "merhaba";
-// 	char *s2 = "42";
-// 	char *total;
-// 	total = ft_strjoin(s1, s2);
-// 	printf("%s\n", total);
-// 	free(total);
-// }
-
-
-// int main()
-// {
-// 	char	*s1 = "-12-12merhaba-12";
-// 	char *total = ft_strtrim(s1, "-12");
-// 	printf("%s\n", total);
-// 	free (total);
-// }
-
-// int	main(void)
-// {
-// 	char	*s;
-
-// 	s = ft_itoa(-42);
-// 	printf("%s\n", s);
-// 	free(s);
-// }
-
-
 // static char f(unsigned int i, char c)
 // {
 // 	(void)i;
@@ -98,11 +53,6 @@
 // 	ft_putnbr_fd(1234, 1);
 // }
 
-// int main(void)
-// {
-//     printf("%s\n", ft_split("merhaba dunya", ' ')[0]);
-//     return 0;
-// }
 
 // int main()
 // {
@@ -497,3 +447,197 @@
 // 	printf("%s\n", ptr);
 // 	free(ptr);
 // }
+
+
+// int main()
+// {
+// 	char *str = "istanbul";
+// 	char *cpy = ft_substr(str, 3, 5);
+// 	printf("%s\n",cpy);
+// 	free(cpy);
+// }
+
+
+// int main()
+// {
+// 	char s1[] = "hello";
+// 	char s2[] = " world";
+// 	char *total = ft_strjoin(s1, s2);
+// 	printf("%s\n", total);
+// 	free(total);
+// }
+
+
+// int main()
+// {
+// 	char *str = "--hello---";
+// 	char *new = ft_strtrim(str, "-");
+// 	printf("%s\n", new);
+// }
+
+
+// int main()
+// {
+// 	char **s = ft_split("--hello---yeşim--42", '-');
+// 	int i;
+
+// 	i = 0;
+// 	while(s[i])
+// 	{
+// 		printf("%s\n", s[i]);
+// 		free(s[i]);
+// 		i++;
+// 	}
+// 	free(s);
+// }
+
+
+
+// int main()
+// {
+// 	int n = -123;
+// 	printf("%s\n", ft_itoa(n));
+// }
+
+
+// static char f(unsigned int i, char c)
+// {
+
+// 	if (i % 2 == 0)
+// 		return (c - 32);
+// 	return (c);
+// }
+
+// int main()
+// {
+// 	char *s = ft_strmapi("abcd", f);
+// 	printf("%s\n", s);
+// 	free(s);
+// }
+
+
+
+// static void f(unsigned int i, char* c)
+// {
+// 	if (i % 2 == 0)
+// 	*c = *c - 32;
+// }
+
+// int main()
+// {
+// 	char str[] = "hello";
+// 	ft_striteri(str, f);
+// 	printf("%s\n", str);
+// }
+
+
+// #include <fcntl.h>
+
+// int main()
+// {
+// 	int fd;
+// 	fd = open("deneme.txt", O_CREAT | O_WRONLY | O_APPEND, 0777);
+// 	ft_putchar_fd('b', fd);
+// 	close(fd);
+// }
+
+
+// #include <fcntl.h>
+
+// int main()
+// {
+// 	int fd;
+// 	fd = open("deneme.txt", O_CREAT | O_WRONLY |O_APPEND, 0777);
+// 	ft_putstr_fd("yeşim", fd);
+// 	close(fd);
+// }
+
+
+// #include <fcntl.h>
+
+// int main()
+// {
+// 	int fd;
+// 	fd = open("deneme.txt", O_CREAT | O_WRONLY |O_APPEND, 0777);
+// 	ft_putendl_fd("yeşim", fd);
+// 	close(fd);
+// }
+
+
+
+// #include <fcntl.h>
+
+// int main()
+// {
+// 	int fd;
+// 	fd = open("deneme.txt", O_CREAT | O_WRONLY |O_APPEND, 0777);
+// 	ft_putnbr_fd(123, fd);
+// 	close(fd);
+// }
+
+
+						// LİSTLER***************
+
+// int main()
+// {
+// 		t_list *node;
+
+// 		node = ft_lstnew(ft_strdup("merhaba 42"));
+// 		printf("%s\n",(char *)node ->content);
+// 		printf("%p\n", node -> next);
+// 		free(node);
+// }
+
+
+
+
+void	del(void *content)
+{
+	free(content);
+}
+
+void *uppercase(void *c)
+{
+	char *s = (char *)c;
+	char *new_s = ft_strdup(s);
+	int i = 0;
+	while (s[i])
+	{
+		new_s[i] = ft_toupper(new_s[i]);
+		i++;
+	}
+	return (new_s);
+}
+
+int main()
+{
+	t_list *n1;
+	t_list *n2;
+	t_list *new;
+
+	new = ft_lstnew(ft_strdup("yeşim"));
+	n1 = ft_lstnew(ft_strdup("merhaba"));
+	n2 = ft_lstnew(ft_strdup("42"));
+
+	// ft_lstadd_front(&n1, n2);
+	n1 -> next = n2;
+	n2 -> next = new;
+	new -> next = NULL;
+
+	// ft_lstiter(n1, uppercase);
+	t_list *new_list = ft_lstmap(n1, uppercase, del);
+
+	// ft_lstadd_back(&n1, n2);
+	// ft_lstadd_back(&n1, new);
+	// printf("%d\n", ft_lstsize(n1));
+	// printf("%s\n", (char *)ft_lstlast(n1) -> content);
+	while(n1)
+	{
+		printf("%s\n", (char*) n1 -> content);
+		n1 = n1 -> next;
+	}
+
+	// ft_lstclear(&n1, del);
+	// if (n1 == NULL)
+	// printf("liste tamamen silindi\n");
+}
