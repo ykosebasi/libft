@@ -378,10 +378,23 @@
 						//******ÖĞREN		// BU MEMSET İN İNT Lİ HALİ;
 // int main()
 // {
-// 	int s[] = {1, 2, 3, 4, 5};
+// 	int s[] = {1000, 2, 3, 4, 5};
 // 	ft_memset(s, 'a', 3 * sizeof(int));
 // 	printf("%d\n", s[0]);
 // }
+
+
+
+// int main()
+// {
+// 	int s = 2000;
+
+// 	ft_memset(&s,255,4);
+// 	//ft_memset(&s,214,2);
+// 	ft_memset(&s,206,1);
+// 	printf("%d\n",s);
+// }
+
 
 
 // int main()
@@ -500,6 +513,7 @@
 // }
 
 
+
 // static char f(unsigned int i, char c)
 // {
 
@@ -591,53 +605,153 @@
 
 
 
-void	del(void *content)
+// void	delone(void *content)
+// {
+// 	free(content);
+// }
+
+// void *uppercase(void *content)
+// {
+// 	char *s = (char *)content;
+// 	char *new_s = ft_strdup(s);
+// 	int i = 0;
+// 	while (s[i])
+// 	{
+// 		new_s[i] = ft_toupper(new_s[i]);
+// 		i++;
+// 	}
+// 	return (new_s);
+// }
+
+
+// // void uppercase(void * content)
+// // {
+	
+// // 	unsigned int i;
+// // 	char *s = (char *)content;
+// // 	i = 0;
+// // 	while (s[i])
+// // 	{
+// // 		s[i] = ft_toupper(s[i]);
+// // 		i++;
+// // 	}
+
+// // }
+// int main()
+// {
+// 	t_list *n1;
+// 	t_list *n2;
+// 	t_list *new;
+
+// 	new = ft_lstnew(ft_strdup("yeşim"));
+// 	n1 = ft_lstnew(ft_strdup("merhaba"));
+// 	n2 = ft_lstnew(ft_strdup("42"));
+
+// 	// ft_lstadd_front(&n1, n2);
+// 	// ft_lstadd_back(&n1, new);
+// 	n1 -> next = n2;
+// 	n2 -> next = new;
+// 	new -> next = NULL;
+
+// 	// ft_lstiter(n1, uppercase);
+// 	t_list *new_list = ft_lstmap(n1, uppercase, delone);
+
+	
+// 	// printf("%d\n", ft_lstsize(n1));
+
+// 	// t_list *del = n1 -> next;
+// 	// ft_lstdelone(n1, delone);
+// 	// n1 = del;
+
+// 	// printf("%s\n", (char *)ft_lstlast(n1) -> content);
+
+// 	t_list *tmp = new_list;
+//     while(tmp)
+//     {
+//         printf("%s\n", (char*) tmp->content);
+//         tmp = tmp->next;
+//     }
+
+// 	t_list *del;
+// 	while (n1)
+// 	{
+// 		 del = n1->next;
+//     	free(n1->content);
+//     	free(n1);
+//    		 n1 = del;
+// 	}
+
+
+// 	// ft_lstclear(&n1, delone);
+// 	// if (n1 == NULL)
+// 	// printf("liste tamamen silindi\n");
+// }
+
+
+void	delone(void *content)
 {
 	free(content);
 }
 
-void *uppercase(void *c)
+void	*uppercase(void *content)
 {
-	char *s = (char *)c;
+	char *s = (char *)content;
 	char *new_s = ft_strdup(s);
-	int i = 0;
-	while (s[i])
+	unsigned int i;
+	i = 0;
+	while(s[i])
 	{
-		new_s[i] = ft_toupper(new_s[i]);
+		s[i] = ft_toupper(s[i]);
 		i++;
 	}
-	return (new_s);
+	return(s);
 }
-
 int main()
 {
 	t_list *n1;
 	t_list *n2;
 	t_list *new;
 
-	new = ft_lstnew(ft_strdup("yeşim"));
 	n1 = ft_lstnew(ft_strdup("merhaba"));
 	n2 = ft_lstnew(ft_strdup("42"));
+	new = ft_lstnew(ft_strdup("yeşim"));
 
 	// ft_lstadd_front(&n1, n2);
+	// ft_lstadd_back(&n1, new);
+
 	n1 -> next = n2;
 	n2 -> next = new;
 	new -> next = NULL;
 
-	// ft_lstiter(n1, uppercase);
-	t_list *new_list = ft_lstmap(n1, uppercase, del);
-
-	// ft_lstadd_back(&n1, n2);
-	// ft_lstadd_back(&n1, new);
 	// printf("%d\n", ft_lstsize(n1));
 	// printf("%s\n", (char *)ft_lstlast(n1) -> content);
-	while(n1)
+
+	// t_list *del = n1 -> next;
+	// ft_lstdelone(n1, delone);
+	// n1 = del;
+
+	// ft_lstclear(&n1, delone);
+	// if (n1 == NULL)
+	// printf("%s\n", "liste temizlendi");
+	
+	// ft_lstiter(n1, uppercase);
+	// ft_lstmap(n1, uppercase, delone);
+
+	t_list *temp = n1;
+	while(temp)
 	{
-		printf("%s\n", (char*) n1 -> content);
-		n1 = n1 -> next;
+		printf("%s\n", (char *)temp -> content);
+		temp = temp -> next;
 	}
 
-	// ft_lstclear(&n1, del);
-	// if (n1 == NULL)
-	// printf("liste tamamen silindi\n");
+	// t_list *del;
+	// while(n1)
+	// {
+	// 	del = n1 -> next;
+	// 	free(n1 -> content);
+	// 	free(n1);
+	// 	n1 = del;
+	// }
+	
 }
+

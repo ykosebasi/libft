@@ -1,17 +1,17 @@
 *This project has been created as part of the 42 curriculum by ykosebas.*
 
 
-Description
+## Description
 
 Libft projesi, C programlama dilindeki standart kütüphane fonksiyonlarını ve ihtiyaç duyabileceğim ek araçları sıfırdan kodlayarak kendi kütüphanemi oluşturduğum bir projedir. Bu süreçte bellek yönetimi, işaretçiler ve veri yapılarının mantığını derinlemesine kavradım.
 
 
-Instructions
+## Instructions
 
 Compilation
 Kütüphane, Makefile kullanılarak -Wall -Wextra -Werror bayrakları ile derlenir.
 
-make: libft.a kütüphanesini derler.
+make: Projedeki tüm .c dosyalarını derler, oluşan nesne (.o) dosyalarını arşivleyerek libft.a statik kütüphanesini oluşturur.
 
 make clean: Oluşturulan nesne (.o) dosyalarını siler.
 
@@ -83,7 +83,7 @@ make re: Kütüphaneyi temizleyip baştan derler.
 | ft_lstmap       | Listeyi fonksiyondan geçirerek yeni bir liste oluşturur.   |
 
 
-📖 Resources
+## 📖 Resources
 
 https://www.geeksforgeeks.org/c/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/
 
